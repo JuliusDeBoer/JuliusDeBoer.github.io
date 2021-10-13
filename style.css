@@ -1,3 +1,12 @@
+* {
+	color: #e5e6df
+}
+
+body {
+	/* background-color: #1e1925; */
+	background-color: #222631;
+}
+
 h1 {
 	font-size: 100px;
 	text-align: center;
