@@ -3,11 +3,11 @@ function sleep(ms) {
 }
 
 async function titleSequence() {
-	await titleWriter();
-	subtitleTerminal();
+	await titleAnim();
+	subtitleAnim();
 }
 
-async function titleWriter() {
+async function titleAnim() {
 	var element = document.getElementById("title");
 	var text = "Julius de Boer";
 	var real_text = "";
@@ -36,7 +36,7 @@ async function titleWriter() {
 	}
 }
 
-async function subtitleTerminal() {
+async function subtitleAnim() {
 	var element = document.getElementById("subtitle");
 	var text = "Welkom!";
 	var real_text = "";
