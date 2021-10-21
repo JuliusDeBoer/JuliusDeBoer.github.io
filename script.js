@@ -2,6 +2,11 @@ function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+async function titleSequence() {
+	await titleWriter();
+	subtitleTerminal();
+}
+
 async function titleWriter() {
 	var element = document.getElementById("title");
 	var text = "Julius de Boer";
@@ -27,6 +32,23 @@ async function titleWriter() {
 		real_text +=  text.charAt(i);
 		element.innerHTML = real_text + effect;
 
+		await sleep(delay);
+	}
+}
+
+async function subtitleTerminal() {
+	var element = document.getElementById("subtitle");
+	var text = "Welkom!";
+	var real_text = "";
+	var delay = 75;
+
+	for (var i = 0; i < text.length; i++) {
+		real_text += text.charAt(i);
+		if (i != text.length - 1){
+			element.innerHTML = real_text + "<";
+		} else {
+			element.innerHTML = real_text;
+		}
 		await sleep(delay);
 	}
 }

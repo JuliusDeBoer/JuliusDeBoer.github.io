@@ -11,6 +11,11 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	font-size: 75px;
+	text-align: center;
+}
+
 .footer {
 	position: fixed;
 	left: 0;
