@@ -2,18 +2,13 @@ function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function titleSequence() {
-	await titleAnim();
-	subtitleAnim();
-}
-
 async function titleAnim() {
 	var element = document.getElementById("title");
 	var text = "Julius de Boer";
 	var real_text = "";
 	var effect = "";
 	var effect_len = 4;
-	var delay = 75;
+	var delay = 50;
 	var characters = "!@#$%^&*()-_=+{};:|/,.<>~";
 
 	for (var i = 0; i < effect_len; i++) {
@@ -38,17 +33,23 @@ async function titleAnim() {
 
 async function subtitleAnim() {
 	var element = document.getElementById("subtitle");
-	var text = "Welkom!";
+	var text = "Welkom";
 	var real_text = "";
-	var delay = 75;
+	var delay = 120;
 
 	for (var i = 0; i < text.length; i++) {
 		real_text += text.charAt(i);
 		if (i != text.length - 1){
-			element.innerHTML = real_text + "<";
+			element.innerHTML = real_text + "|";
 		} else {
 			element.innerHTML = real_text;
 		}
 		await sleep(delay);
 	}
+}
+
+async function init() {
+	console.info("(*-*)\n-Jul")
+	await titleAnim();
+	subtitleAnim();
 }
