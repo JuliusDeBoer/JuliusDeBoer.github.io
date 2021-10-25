@@ -11,9 +11,11 @@ async function titleAnim() {
 	var delay = 50;
 	var characters = "!@#$%^&*()-_=+{};:|/,.<>~";
 
+	real_text = real_text
+
 	for (var i = 0; i < effect_len; i++) {
 		effect += characters.charAt(Math.floor(Math.random() * characters.length));
-		element.innerHTML = effect;
+		element.innerHTML = effect.padEnd(text.length, " ");
 		await sleep(delay);
 	}
 
@@ -25,7 +27,7 @@ async function titleAnim() {
 		}
 
 		real_text +=  text.charAt(i);
-		element.innerHTML = real_text + effect;
+		element.innerHTML = (real_text + effect).padEnd(text.length, " ");
 
 		await sleep(delay);
 	}
@@ -40,7 +42,7 @@ async function subtitleAnim() {
 	for (var i = 0; i < text.length; i++) {
 		real_text += text.charAt(i);
 		if (i != text.length - 1){
-			element.innerHTML = real_text + "|";
+			element.innerHTML = (real_text + "|").padEnd(text.length, " ");
 		} else {
 			element.innerHTML = real_text;
 		}
