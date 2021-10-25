@@ -6,8 +6,17 @@
   src: url("https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Of2PQw.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgo6eA.ttf") format("truetype");
+}
+
 * {
-	color: #e5e6df
+	color: #e5e6df;
+	font-family: Ubuntu;
 }
 
 body {
