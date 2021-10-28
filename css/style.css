@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url("https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Of2PQw.ttf") format("truetype");
+  src: url("https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Me5Q.ttf") format("truetype");
 }
 
 @font-face {
@@ -15,32 +15,86 @@
 }
 
 * {
-	color: #e4e5e5;
+	color: #141515;
 	font-family: Ubuntu;
+	padding: 0;
+	margin: 0;
 }
 
 body {
-	background-color: #141515;
+	background-color: #dfdfdd;
 }
 
-h1 {
-	font-family: Roboto Mono;
-	font-size: 100px;
+.title {
+	font-family: Roboto;
+	font-size: 120px;
+	letter-spacing: 10px;
+	line-height: 97%;
+	width: max-content;
+	position: absolute;
+	top: 30%;
 	text-align: center;
+	width: 100%;
+
+	background: linear-gradient(-30deg, #f32170, #ff6b08);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	background-position: left;
 }
 
-h2 {
-	font-family: Roboto Mono;
-	font-size: 75px;
-	text-align: center;
+.title-container {
+	width: max-content;
+
+	background: linear-gradient(-30deg, #f32170, #ff6b08);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+	background-position: left;
 }
 
-.footer {
+.title-container h1 {
+	font-family: Roboto;
+	font-size: 120px;
+	letter-spacing: 10px;
+	line-height: 97%;
+}
+
+.footer{
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	margin: 0;
 	background-color: #040508;
+	color: #dfdfdd;
 	text-align: center;
+}
+
+#subtitle {
+	font-family: Roboto;
+	font-size: 60px;
+
+	color: #2e3535;
+}
+
+#logo-main {
+	position: absolute;
+	right: 15vw;
+	top: 15vh;
+	width: 25vw;
+	height: 25vw;
+}
+
+#logo-main path {
+	stroke-width: 2px;
+	stroke-dasharray: 1122;
+	stroke-dashoffset: 1122;
+	animation: logo-anim 3s ease forwards 4s;
+}
+
+@keyframes logo-anim {
+	to {
+		stroke-dashoffset: 0%;
+	}
 }
