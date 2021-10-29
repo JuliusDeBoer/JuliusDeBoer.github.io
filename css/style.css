@@ -25,6 +25,11 @@ body {
 	background-color: #dfdfdd;
 }
 
+a {
+	font-weight: bolder;
+	text-decoration: none;
+}
+
 .title {
 	font-family: Roboto;
 	font-size: 120px;
@@ -60,7 +65,7 @@ body {
 	line-height: 97%;
 }
 
-.footer{
+.footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -69,6 +74,10 @@ body {
 	background-color: #040508;
 	color: #dfdfdd;
 	text-align: center;
+}
+
+.footer * {
+	color: #dfdfdd
 }
 
 #subtitle {
