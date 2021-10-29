@@ -35,11 +35,11 @@ a {
 	font-size: 120px;
 	letter-spacing: 10px;
 	line-height: 97%;
-	width: max-content;
 	position: absolute;
 	top: 30%;
-	text-align: center;
-	width: 100%;
+	left: 50%;
+	margin: 10px auto;
+	transform: translate(-50%, 0);
 
 	background: linear-gradient(-30deg, #2613d4, #1af399);
 	-webkit-background-clip: text;
