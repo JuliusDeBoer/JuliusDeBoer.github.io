@@ -35,8 +35,6 @@ async function typer(text, query) {
 function loadLang () {
 	lang = navigator.language.substr(0, 2);
 
-	lang = "nl"
-
 	if(langdata[lang] == null) {
 		console.warn(lang + " is not a supported language, using en");
 		lang = "en";
