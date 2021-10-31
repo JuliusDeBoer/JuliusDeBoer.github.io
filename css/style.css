@@ -27,7 +27,7 @@ body {
 
 a {
 	font-weight: bolder;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .title {
