@@ -1,42 +1,17 @@
-# Nuxt 3 Minimal Starter
+# My really cool website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Deploy to GitHub Pages](https://github.com/JuliusDeBoer/JuliusDeBoer.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/JuliusDeBoer/JuliusDeBoer.github.io/actions/workflows/deploy.yml)
 
-## Setup
+This is my really cool website
 
-Make sure to install the dependencies:
+## Building
 
-```bash
-# yarn
-yarn install
+To build this project run the usual stuff:
 
-# npm
+```sh
 npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
+```sh
 npm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
