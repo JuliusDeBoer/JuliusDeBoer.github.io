@@ -15,3 +15,8 @@ npm install
 ```sh
 npm run dev
 ```
+
+## License
+
+This website is licensed under the MIT License. For more information see
+[LICENSE](LICENSE) for more information.
