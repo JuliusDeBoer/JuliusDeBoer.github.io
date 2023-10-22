@@ -38,6 +38,8 @@ model.rotateX(-10);
 update();
 
 onMounted(() => {
+	const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+	if(reduceMotion) { return; }
 	// 15 fps
 	intervalTimer = setInterval(update, 66);
 });
