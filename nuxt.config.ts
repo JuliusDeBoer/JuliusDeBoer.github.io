@@ -3,6 +3,9 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			title: "Julius",
+			meta: [
+				{ name: "description", content: "Its a cube!" }
+			],
 			htmlAttrs: {
 				lang: "en"
 			}
