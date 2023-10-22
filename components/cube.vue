@@ -1,63 +1,50 @@
-<script lang="ts">
+<script setup lang="ts">
 let frame = 0;
 let intervalTimer: NodeJS.Timeout;
 const model = new Model();
+let buffer = useState('buffer', () => "a")
 
-export default {
-	data() {
-		return {
-			buffer: ''
-		}
-	},
-	methods: {
-		update() {
-			frame++;
-			const textBuffer = new TextBuffer(60, 30);
+function update() {
+	frame++;
+	const textBuffer = new TextBuffer(60, 30);
 
-			model.rotateX(Math.sin(frame / 10) / 10);
-			model.rotateY(Math.cos(frame / 9) / 10);
-			model.rotateZ(Math.sin(frame / 12) / 10);
+	model.rotateX(Math.sin(frame / 10) / 10);
+	model.rotateY(Math.cos(frame / 9) / 10);
+	model.rotateZ(Math.sin(frame / 12) / 10);
 
-			model.draw(textBuffer, { x: 15, y: 15 });
-			this.buffer = textBuffer.data.join("\n");
-		}
-	},
-	created() {
-		model.pushAll([
-			new Line(new Vec3(-8,  8,  8), new Vec3( 8,  8,  8)),
-			new Line(new Vec3( 8,  8,  8), new Vec3( 8, -8,  8)),
-			new Line(new Vec3( 8, -8,  8), new Vec3(-8, -8,  8)),
-			new Line(new Vec3(-8, -8,  8), new Vec3(-8,  8,  8)),
+	model.draw(textBuffer, { x: 15, y: 15 });
+	buffer.value = textBuffer.data.join("\n");
+}
 
-			new Line(new Vec3(-8,  8,  8), new Vec3(-8,  8, -8)),
-			new Line(new Vec3( 8,  8,  8), new Vec3( 8,  8, -8)),
-			new Line(new Vec3( 8, -8,  8), new Vec3( 8, -8, -8)),
-			new Line(new Vec3(-8, -8,  8), new Vec3(-8, -8, -8)),
+model.pushAll([
+	new Line(new Vec3(-8,  8,  8), new Vec3( 8,  8,  8)),
+	new Line(new Vec3( 8,  8,  8), new Vec3( 8, -8,  8)),
+	new Line(new Vec3( 8, -8,  8), new Vec3(-8, -8,  8)),
+	new Line(new Vec3(-8, -8,  8), new Vec3(-8,  8,  8)),
 
-			new Line(new Vec3(-8,  8, -8), new Vec3( 8,  8, -8)),
-			new Line(new Vec3( 8,  8, -8), new Vec3( 8, -8, -8)),
-			new Line(new Vec3( 8, -8, -8), new Vec3(-8, -8, -8)),
-			new Line(new Vec3(-8, -8, -8), new Vec3(-8,  8, -8))
-		]);
+	new Line(new Vec3(-8,  8,  8), new Vec3(-8,  8, -8)),
+	new Line(new Vec3( 8,  8,  8), new Vec3( 8,  8, -8)),
+	new Line(new Vec3( 8, -8,  8), new Vec3( 8, -8, -8)),
+	new Line(new Vec3(-8, -8,  8), new Vec3(-8, -8, -8)),
 
-		model.rotateY(12);
-		model.rotateX(-10);
-		this.update();
-	},
-	mounted() {
-		// 12 fps
-		// intervalTimer = setInterval(this.update, 83.33);
+	new Line(new Vec3(-8,  8, -8), new Vec3( 8,  8, -8)),
+	new Line(new Vec3( 8,  8, -8), new Vec3( 8, -8, -8)),
+	new Line(new Vec3( 8, -8, -8), new Vec3(-8, -8, -8)),
+	new Line(new Vec3(-8, -8, -8), new Vec3(-8,  8, -8))
+]);
 
-		// 15 fps
-		intervalTimer = setInterval(this.update, 66);
+model.rotateY(12);
+model.rotateX(-10);
+update();
 
-		// 60 fps
-		// intervalTimer = setInterval(this.update, 16.66);
-	},
-	beforeDestroy() {
+onMounted(() => {
+	// 15 fps
+	intervalTimer = setInterval(update, 66);
+});
+
+onBeforeUnmount(() => {
 		clearInterval(intervalTimer);
-	}
-};
+});
 </script>
 
 <template>
