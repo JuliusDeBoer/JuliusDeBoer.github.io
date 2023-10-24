@@ -12,13 +12,23 @@ export default defineNuxtConfig({
 		}
 	},
 	experimental: {
-		headNext: true
+		headNext: true,
+		typescriptBundlerResolution: true,
+		crossOriginPrefetch: true
 	},
 	css: ["~/assets/css/main.css"],
 	postcss: {
 		plugins: {
 			tailwindcss: {},
-			autoprefixer: {},
-		},
+			autoprefixer: {}
+		}
+	},
+	typescript: {
+		typeCheck: "build"
+	},
+	webpack: {
+		experiments: {
+			futureDefaults: true
+		}
 	}
 });
