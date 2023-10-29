@@ -14,9 +14,6 @@ export default defineNuxtConfig({
 		"@nuxtjs/color-mode",
 		"nuxt-icon"
 	],
-	typescript: {
-		typeCheck: "build"
-	},
 	devtools: {
 		enabled: true
 	},
