@@ -50,7 +50,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-	<div class="bg-black text-white w-[576px] h-[739]">
+	<div>
 		<span class="font-mono leading-none whitespace-pre">
 			{{ buffer }}
 		</span>
