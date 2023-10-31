@@ -1,17 +1,14 @@
 <script setup lang="ts">
 	const colorMode = useColorMode();
-	let colorToggleValue = colorMode.value === "light";
-
-	function updateColorscheme() {
-		colorMode.preference = colorToggleValue ? "dark" : "light";
-	}
 </script>
 
 <template>
 	<label class="btn btn-neutral btn-circle swap swap-rotate">
-		<input type="checkbox" v-model="colorToggleValue" @input="updateColorscheme" />
+		<input type="checkbox" v-model="colorMode.preference" true-value="dark" false-value="light" autocomplete="off" />
 
-		<Icon name="uil:moon" class="swap-on w-10 h-10" />
-		<Icon name="uil:sun" class="swap-off w-10 h-10" />
+		<ClientOnly>
+			<Icon name="uil:moon" class="swap-on w-10 h-10" />
+			<Icon name="uil:sun" class="swap-off w-10 h-10" />
+		</ClientOnly>
 	</label>
 </template>
