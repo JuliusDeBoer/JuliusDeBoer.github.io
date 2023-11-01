@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	const mitBody = `
+const mitBody = `
 			Permission is hereby granted, free of charge, to any person obtaining a copy
 			of this software and associated documentation files (the "Software"), to deal
 			in the Software without restriction, including without limitation the rights
@@ -140,26 +140,31 @@ const items = [
 			FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 			OTHER DEALINGS IN THE FONT SOFTWARE.`
 	}
-] as { label: string, license: string, content: string }[];
+] as { label: string; license: string; content: string }[];
 </script>
 
 <template>
 	<div class="container mx-auto p-4">
 		<h1 class="font-heading text-4xl">LICENSES</h1>
-		<div class="collapse collapse-arrow bg-primary-400 dark:bg-secondary-900 my-4" v-for="item in items">
-			<input type="radio" name="accordion" :id="item.label.replaceAll(' ', '-')" />
+		<div
+			class="collapse collapse-arrow bg-primary-400 dark:bg-secondary-900 my-4"
+			v-for="item in items">
+			<input
+				type="radio"
+				name="accordion"
+				:id="item.label.replaceAll(' ', '-')" />
 
 			<div class="collapse-title text-xl font-medium flex">
 				<label :for="item.label.replaceAll(' ', '-')">{{ item.label }}</label>
 				<div class="divider divider-horizontal" />
-					<span class="badge badge-neutral">{{ item.license }}</span>
-				</div>
+				<span class="badge badge-neutral">{{ item.license }}</span>
+			</div>
 
-				<div class="collapse-content card">
-					<div class="card-body font-mono whitespace-pre-line overflow-x-auto">
-						{{ item.content }}
-					</div>
+			<div class="collapse-content card">
+				<div class="card-body font-mono whitespace-pre-line overflow-x-auto">
+					{{ item.content }}
 				</div>
 			</div>
 		</div>
+	</div>
 </template>

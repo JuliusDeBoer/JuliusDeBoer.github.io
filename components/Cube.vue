@@ -2,7 +2,7 @@
 let frame = 0;
 let intervalTimer: NodeJS.Timeout;
 const model = new Model();
-let buffer = useState('buffer', () => "a")
+let buffer = useState("buffer", () => "a");
 
 function update() {
 	frame++;
@@ -17,20 +17,20 @@ function update() {
 }
 
 model.pushAll([
-	new Line(new Vec3(-8,  8,  8), new Vec3( 8,  8,  8)),
-	new Line(new Vec3( 8,  8,  8), new Vec3( 8, -8,  8)),
-	new Line(new Vec3( 8, -8,  8), new Vec3(-8, -8,  8)),
-	new Line(new Vec3(-8, -8,  8), new Vec3(-8,  8,  8)),
+	new Line(new Vec3(-8, 8, 8), new Vec3(8, 8, 8)),
+	new Line(new Vec3(8, 8, 8), new Vec3(8, -8, 8)),
+	new Line(new Vec3(8, -8, 8), new Vec3(-8, -8, 8)),
+	new Line(new Vec3(-8, -8, 8), new Vec3(-8, 8, 8)),
 
-	new Line(new Vec3(-8,  8,  8), new Vec3(-8,  8, -8)),
-	new Line(new Vec3( 8,  8,  8), new Vec3( 8,  8, -8)),
-	new Line(new Vec3( 8, -8,  8), new Vec3( 8, -8, -8)),
-	new Line(new Vec3(-8, -8,  8), new Vec3(-8, -8, -8)),
+	new Line(new Vec3(-8, 8, 8), new Vec3(-8, 8, -8)),
+	new Line(new Vec3(8, 8, 8), new Vec3(8, 8, -8)),
+	new Line(new Vec3(8, -8, 8), new Vec3(8, -8, -8)),
+	new Line(new Vec3(-8, -8, 8), new Vec3(-8, -8, -8)),
 
-	new Line(new Vec3(-8,  8, -8), new Vec3( 8,  8, -8)),
-	new Line(new Vec3( 8,  8, -8), new Vec3( 8, -8, -8)),
-	new Line(new Vec3( 8, -8, -8), new Vec3(-8, -8, -8)),
-	new Line(new Vec3(-8, -8, -8), new Vec3(-8,  8, -8))
+	new Line(new Vec3(-8, 8, -8), new Vec3(8, 8, -8)),
+	new Line(new Vec3(8, 8, -8), new Vec3(8, -8, -8)),
+	new Line(new Vec3(8, -8, -8), new Vec3(-8, -8, -8)),
+	new Line(new Vec3(-8, -8, -8), new Vec3(-8, 8, -8))
 ]);
 
 model.rotateY(12);
@@ -38,14 +38,18 @@ model.rotateX(-10);
 update();
 
 onMounted(() => {
-	const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-	if(reduceMotion) { return; }
+	const reduceMotion = window.matchMedia(
+		"(prefers-reduced-motion: reduce)"
+	).matches;
+	if (reduceMotion) {
+		return;
+	}
 	// 15 fps
 	intervalTimer = setInterval(update, 66);
 });
 
 onBeforeUnmount(() => {
-		clearInterval(intervalTimer);
+	clearInterval(intervalTimer);
 });
 </script>
 
