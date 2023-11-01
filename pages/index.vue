@@ -16,7 +16,7 @@
 				<br />
 				de Boer
 			</h1>
-			<Cube class="text-[8px] sm:text-xs md:text-sm xl:text-base w-[288px] sm:w-[436px] md:w-[504px] xl:w-[580px] overflow-hidden" />
+			<Cube class="text-[8px] sm:text-xs md:text-sm xl:text-base w-[288px] sm:w-[436px] md:w-[504px] xl:w-[580px] overflow-hidden font-extrabold lg:font-normal" />
 		</div>
 	</div>
 </template>
