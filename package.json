@@ -9,9 +9,9 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.0.0",
     "@nuxtjs/color-mode": "^3.3.0",
-    "@nuxtjs/tailwindcss": "^6.8.1",
-    "@types/node": "^18.18.7",
-    "daisyui": "^3.9.3",
+    "@nuxtjs/tailwindcss": "^6.9.4",
+    "@types/node": "^18.18.8",
+    "daisyui": "^3.9.4",
     "nuxt": "^3.8.0",
     "nuxt-icon": "^0.6.1",
     "nuxt-simple-sitemap": "^3.4.1",
