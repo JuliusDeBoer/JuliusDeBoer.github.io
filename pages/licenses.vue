@@ -18,40 +18,10 @@ const mitBody = `
 			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 			SOFTWARE.`;
 
-const items = [
-	{
-		label: "juliusdeboer.github.io",
-		license: "MIT",
-		content: `Copyright (c) 2023 Julius de Boer
-			${mitBody}`
-	},
-	{
-		label: "Nuxt",
-		license: "MIT",
-		content: `Copyright (c) 2016-present - Nuxt Team
-			${mitBody}`
-	},
-	{
-		label: "Tailwind CSS",
-		license: "MIT",
-		content: `Copyright (c) Tailwind Labs, Inc.
-			${mitBody}`
-	},
-	{
-		label: "daisyUI",
-		license: "MIT",
-		content: `Copyright (c) 2020 Pouya Saadeghi
-			${mitBody}`
-	},
-	{
-		label: "IBM Plex",
-		license: "OFL",
-		content: `Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
-
+const oflBody = `
 			This Font Software is licensed under the SIL Open Font License, Version 1.1.
-
-			This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
-
+			This license is copied below, and is also available with a FAQ at:
+			http://scripts.sil.org/OFL
 
 			-----------------------------------------------------------
 			SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
@@ -85,7 +55,7 @@ const items = [
 			distributed by the Copyright Holder(s).
 
 			"Modified Version" refers to any derivative made by adding to, deleting,
-			or substituting -- in part or in whole -- any of the components of the
+			or substituting — in part or in whole — any of the components of the
 			Original Version, by changing formats or by porting the Font Software to a
 			new environment.
 
@@ -138,7 +108,45 @@ const items = [
 			INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 			DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 			FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
-			OTHER DEALINGS IN THE FONT SOFTWARE.`
+			OTHER DEALINGS IN THE FONT SOFTWARE.`;
+
+const items = [
+	{
+		label: "juliusdeboer.github.io",
+		license: "MIT",
+		content: `Copyright (c) 2023 Julius de Boer
+			${mitBody}`
+	},
+	{
+		label: "Nuxt",
+		license: "MIT",
+		content: `Copyright (c) 2016-present - Nuxt Team
+			${mitBody}`
+	},
+	{
+		label: "Tailwind CSS",
+		license: "MIT",
+		content: `Copyright (c) Tailwind Labs, Inc.
+			${mitBody}`
+	},
+	{
+		label: "daisyUI",
+		license: "MIT",
+		content: `Copyright (c) 2020 Pouya Saadeghi
+			${mitBody}`
+	},
+	{
+		label: "IBM Plex",
+		license: "OFL",
+		content: `Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
+			${oflBody}`
+	},
+	{
+		label: "Monaspace",
+		license: "OFL",
+		content: `Copyright (c) 2023, GitHub https://github.com/githubnext/monaspace
+			with Reserved Font Name "Monaspace", including subfamilies: "Argon", "Neon", "Xenon", "Radon", and "Krypton"
+			${oflBody}`
 	}
 ] as { label: string; license: string; content: string }[];
 </script>
