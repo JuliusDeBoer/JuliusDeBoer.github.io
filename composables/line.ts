@@ -42,7 +42,7 @@ export class Line {
 
 				if (z < -5) {
 					char = "-";
-				} else if (z < -0) {
+				} else if (z < 0) {
 					char = "~";
 				} else if (z < 5) {
 					char = "=";
@@ -69,7 +69,7 @@ export class Line {
 
 				if (z < -5) {
 					char = ":";
-				} else if (z < -0) {
+				} else if (z < 0) {
 					char = "|";
 				} else if (z < 5) {
 					char = "/";
