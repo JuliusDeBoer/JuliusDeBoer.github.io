@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/juliusdeboer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://juliusdeboer.github.io
+  * I am juliusdeboer (https://keybase.io/juliusdeboer) on keybase.
+  * I have a public key ASChMogT-_mYkVQuxQHhH5rUn8tpUJDWne6B26fehT05cgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a1328813fbf99891542ec501e11f9ad49fcb695090d69dee81dba7de853d39720a",
+      "host": "keybase.io",
+      "kid": "0120a1328813fbf99891542ec501e11f9ad49fcb695090d69dee81dba7de853d39720a",
+      "uid": "952da860fc5e70feb9aca119f126b619",
+      "username": "juliusdeboer"
+    },
+    "merkle_root": {
+      "ctime": 1703108457,
+      "hash": "d0c6d2e25ebd2c97c2fc40de790852a6bdb0e90d8120cd59378f4380072881d92df391a72e9edc671ddb450f1f860af297953455f3d37a79d8ef0b19bbf0db53",
+      "hash_meta": "c13e17f8974db831b1f00852dcff8cc0e5283d8ab8c8e51d9c67598d25470bb3",
+      "seqno": 25260158
+    },
+    "service": {
+      "entropy": "IelwcjUE/P6ADISVciFKWU5Z",
+      "hostname": "juliusdeboer.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.3"
+  },
+  "ctime": 1703108492,
+  "expire_in": 504576000,
+  "prev": "f9b344ff103980889117b63adc36e84f56094adff20c447f10917e2b2aadd79b",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgoTKIE/v5mJFULsUB4R+a1J/LaVCQ1p3ugdun3oU9OXIKp3BheWxvYWTESpcCBsQg+bNE/xA5gIiRF7Y63DboT1YJSt/yDER/EJF+Kyqt15vEIOQh3SwX2ao8x+cs3VMrcfdh2xShGv8MFHZI+7kAAdtMAgHCo3NpZ8RACOy/FW0kXADwZHjWF10yJR9pAb67slKmLA6J0/rm1ySEh2D1J6Y6IZam6VuD3aBA0CKktxCYTbE6xsw4AOv/BqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEmYdIWGz1mhBoeHB2lBDrhm/UKkK4lEwVZTAPVreXc+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/juliusdeboer
+
+==================================================================
