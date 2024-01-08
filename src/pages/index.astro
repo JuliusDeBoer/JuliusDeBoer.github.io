@@ -1,19 +1,27 @@
 ---
-import Header from '../components/HeaderComponent.astro';
-import Footer from '../components/FooterComponent.astro'
+import Header from "../components/HeaderComponent.vue";
+import RepoCatalogue from "../components/RepoCatalogueComponent.vue";
+import Footer from "../components/FooterComponent.vue";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="A wild website appears!" />
-		<title>Astro</title>
-	</head>
-	<body class="bg-zinc-950 text-stone-100">
-		<Header />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="A wild website appears!" />
+    <link rel="preconnect" href="https:api.github.com" />
+    <title>Julius de Boer</title>
+  </head>
+
+  <body class="bg-zinc-950 text-stone-100">
+    <Header />
+    <main>
+      <div class="container mx-auto">
+        <RepoCatalogue client:only="vue" />
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>
